@@ -20,7 +20,7 @@ class SplashPageState extends State<SplashPage>
 
 
   void _navigateAway() {
-    Navigator.pushNamed(context, '/intro');
+    Navigator.pushNamed(context, '/login');
   }
   
   @override

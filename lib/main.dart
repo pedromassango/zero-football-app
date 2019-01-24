@@ -14,7 +14,8 @@ class ZeroApp extends StatelessWidget {
       ),
       home: SplashPage(),
       routes: <String, WidgetBuilder>{
-        '/intro': (BuildContext context) =>  IntroPage(),
+        '/login': (BuildContext context) =>  IntroPage(),
+
       },
     );
   }
