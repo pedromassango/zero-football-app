@@ -12,6 +12,7 @@ class PageReveal extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipOval(
       clipper: CircleRevealClipper(revealPercent),
+      child: child,
     );
   }
 }
@@ -19,11 +20,13 @@ class PageReveal extends StatelessWidget {
 class CircleRevealClipper extends CustomClipper<Rect> {
   final double revealPercent;
 
-  CircleRevealClipper( this.revealPercent);
+  CircleRevealClipper(
+    this.revealPercent,
+  );
 
   @override
   Rect getClip(Size size) {
-    final epicCenter = Offset(size.width/2, size.height* 0.9);
+    final epicCenter = Offset(size.width / 2, size.height /2);
 
     double theta = atan(epicCenter.dy / epicCenter.dx);
     final distanceToCorner = epicCenter.dy / sin(theta);
@@ -32,11 +35,7 @@ class CircleRevealClipper extends CustomClipper<Rect> {
     final diameter = 2 * radius;
 
     return Rect.fromLTWH(
-        epicCenter.dx - radius,
-        epicCenter.dy - radius,
-        diameter,
-        diameter
-    );
+        epicCenter.dx - radius, epicCenter.dy - radius, diameter, diameter);
   }
 
   @override
