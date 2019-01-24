@@ -35,7 +35,7 @@ class LoginPageState extends State<LoginPage> {
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(8)),
-                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 5)]),
+                  boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 15)]),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -58,7 +58,7 @@ class LoginPageState extends State<LoginPage> {
                     child: TextField(
                       controller: _usernameController,
                       decoration: InputDecoration(
-                        hintText: 'Nome de usuário',
+                        hintText: 'Telefone',
                       ),
                     ),
                   ),
