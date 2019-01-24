@@ -100,7 +100,9 @@ class LoginPageState extends State<LoginPage> {
             'Criar conta',
             style: TextStyle(color: Colors.black),
           ),
-          onPressed: () {}),
+          onPressed: () {
+            Navigator.of(context).pushNamed('/register');
+          }),
     );
   }
 }
