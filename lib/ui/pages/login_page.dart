@@ -68,19 +68,22 @@ class LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   Spacer(),
-                  Container(
-                    width: double.maxFinite,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        boxShadow: [
-                          BoxShadow(color: Colors.black12, blurRadius: 5)
-                        ]),
-                    child: Center(
-                      child: Text(
-                        'Entrar',
-                        style: TextStyle(color: Colors.white),
+                  GestureDetector(
+                    onTap: _onLoginClicked,
+                    child: Container(
+                      width: double.maxFinite,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(color: Colors.black12, blurRadius: 5)
+                          ]),
+                      child: Center(
+                        child: Text(
+                          'Entrar',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   )
@@ -104,5 +107,9 @@ class LoginPageState extends State<LoginPage> {
             Navigator.of(context).pushNamed('/register');
           }),
     );
+  }
+
+  _onLoginClicked() {
+    Navigator.of(context).pushReplacementNamed('/home');
   }
 }
