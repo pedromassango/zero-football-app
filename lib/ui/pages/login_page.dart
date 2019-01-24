@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:zero/ui/components/page_reveal.dart';
 
-class IntroPage extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return IntroPageState();
+    return LoginPageState();
   }
 }
 
-class IntroPageState extends State<IntroPage> {
+class LoginPageState extends State<LoginPage> {
   TextEditingController _usernameController, _passwordController;
 
   @override
