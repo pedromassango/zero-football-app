@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   int _navigationIndex = 0;
 
   List<String> _bottomNavigationItemsTitles = [
-    'Início', 'Ranking', 'Notificações', 'Definições',
+    'Desafios', 'Vencedores', 'Notificações', 'Definições',
   ];
 
   @override
@@ -78,6 +78,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.red,
@@ -113,6 +114,17 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       body: Column(
         children: <Widget>[
           _buildCustomToolbar(),
+    Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height-128,
+      child: TabBarView(
+          controller: _pageController,
+          children: [
+            Container(child: Center(child: Text('Hello'),)),
+            Container(child: Center(child: Text('He32424llo'),)),
+            Container(child: Center(child: Text('H34645645645ello'),)),
+          ]),
+    )
 
     /*      TabBarView(
             controller: _pageController,
