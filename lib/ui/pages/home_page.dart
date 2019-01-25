@@ -10,10 +10,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
   TabController _pageController;
-  int _navigationIndex = 0;
+  int _navigationIndex = 1;
 
   List<String> _bottomNavigationItemsTitles = [
-    'Desafios', 'Vencedores', 'Notificações', 'Definições',
+    'Desafios', 'Vencedores', 'Definições',
   ];
 
   @override
@@ -69,24 +69,19 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           ),
 
           Spacer(),
-          Icon(Icons.notifications, size: 24,)
+          _loadIconsFromImage('notification.png')
         ],
       ),
     );
   }
 
+  ImageIcon _loadIconsFromImage(String path){
+    return ImageIcon(AssetImage(path));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.red,
-        child: Icon(
-          Icons.adjust,
-          color: Colors.white,
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _navigationIndex,
@@ -98,17 +93,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         },
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home,),
-              title: Text(_bottomNavigationItemsTitles.elementAt(0))),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.show_chart,),
+              icon: _loadIconsFromImage("leaderboard.png"),
               title: Text(_bottomNavigationItemsTitles.elementAt(1))),
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications,),
-              title: Text(_bottomNavigationItemsTitles.elementAt(2))),
+            icon: _loadIconsFromImage('ball.png'),
+            title: Text(_bottomNavigationItemsTitles.elementAt(0),),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings,),
-              title: Text(_bottomNavigationItemsTitles.elementAt(3))),
+              icon: _loadIconsFromImage('settings.png'),
+              title: Text(_bottomNavigationItemsTitles.elementAt(2))),
         ],
       ),
       body: Column(
