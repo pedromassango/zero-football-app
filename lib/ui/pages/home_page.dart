@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
     _pageController = TabController(
       vsync: this,
+      initialIndex: _navigationIndex,
       length: _bottomNavigationItemsTitles.length,
     );
   }
