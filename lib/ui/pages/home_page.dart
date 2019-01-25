@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zero/ui/tabs/challenges_tab.dart';
+import 'package:zero/ui/tabs/winners_tab.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -113,9 +115,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       child: TabBarView(
           controller: _pageController,
           children: [
-            Container(child: Center(child: Text('Hello'),)),
-            Container(child: Center(child: Text('He32424llo'),)),
-            Container(child: Center(child: Text('H34645645645ello'),)),
+            WinnersTab(),
+            ChallengesTab(),
+            Container(child: Center(child: Text('Settings'),)),
           ]),
     )
 
