@@ -113,6 +113,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height-128,
       child: TabBarView(
+        physics: NeverScrollableScrollPhysics(),
           controller: _pageController,
           children: [
             WinnersTab(),
