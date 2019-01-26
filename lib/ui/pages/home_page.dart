@@ -110,27 +110,18 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       body: Column(
         children: <Widget>[
           _buildCustomToolbar(),
-    Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height-128,
-      child: TabBarView(
-        physics: NeverScrollableScrollPhysics(),
-          controller: _pageController,
-          children: [
-            WinnersTab(),
-            ChallengesTab(),
-            Container(child: Center(child: Text('Settings'),)),
-          ]),
-    )
-
-    /*      TabBarView(
-            controller: _pageController,
+          Expanded(
+            flex: 2,
+            child: TabBarView(
+              physics: NeverScrollableScrollPhysics(),
+              controller: _pageController,
               children: [
-            Container(child: Center(child: Text('Hello'),)),
-            Container(child: Center(child: Text('He32424llo'),)),
-            Container(child: Center(child: Text('H34645645645ello'),)),
-          ])*/
-
+                WinnersTab(),
+                ChallengesTab(),
+                Container(child: Center(child: Text('Settings'),)),
+              ],
+            ),
+          ),
         ],
       ),
     );
