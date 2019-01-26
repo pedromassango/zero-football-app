@@ -51,7 +51,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ),
       child: Row(
         children: <Widget>[
-          Icon(Icons.account_circle, size: 50,),
+          //TODO: replace with user image
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/profile'),
+            child: Icon(Icons.account_circle, size: 45,),
+          ),
 
           Padding(
             padding: const EdgeInsets.only(left: 8, right: 8),
