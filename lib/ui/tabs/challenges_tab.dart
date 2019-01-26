@@ -7,8 +7,6 @@ class ChallengesTab extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 400,
       child: LoadingIndicator(
           isLoading: false,
           replacement: ListView.builder(
