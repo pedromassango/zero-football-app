@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ProgressWidget extends StatelessWidget{
+class LoadingIndicator extends StatelessWidget{
 
   final bool isLoading;
   final Widget replacement;
 
-  ProgressWidget({
+  LoadingIndicator({
     this.isLoading = true,
     this.replacement
   });
