@@ -26,7 +26,7 @@ class ChallengeWidget extends StatelessWidget{
 
               Column(
                 children: <Widget>[
-                  Icon(Icons.pie_chart, size: 42,color: Colors.blueAccent,),
+                  Icon(Icons.pie_chart, size: 50,color: Colors.blueAccent,),
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text('Petro de Luanda'),
@@ -35,8 +35,8 @@ class ChallengeWidget extends StatelessWidget{
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                child: Text('0 - 0', style: TextStyle(
+                padding: const EdgeInsets.only(left: 24, right: 24, bottom: 16),
+                child: Text('VS', style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold
                 ),),
@@ -44,7 +44,7 @@ class ChallengeWidget extends StatelessWidget{
 
               Column(
                 children: <Widget>[
-                  Icon(Icons.arrow_drop_down_circle, size: 42, color: Colors.green,),
+                  Icon(Icons.arrow_drop_down_circle, size: 50, color: Colors.green,),
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text('1º de Agosto'),

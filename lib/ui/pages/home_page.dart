@@ -69,7 +69,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 ),
 
                 Text('10.000Kzs', style: TextStyle(
-                    fontSize: 12
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  color: Colors.green
                 ),)
               ],
             ),
