@@ -12,10 +12,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
   TabController _pageController;
-  int _navigationIndex = 1;
+  int _navigationIndex = 0;
 
   List<String> _bottomNavigationItemsTitles = [
-    'Desafios', 'Vencedores', 'Definições',
+    'Desafios', 'Vencedores', 'Minhas apostas',
   ];
 
   @override
@@ -102,12 +102,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         },
         items: [
           BottomNavigationBarItem(
-              icon: _loadIconsFromImage("leaderboard.png"),
-              title: Text(_bottomNavigationItemsTitles.elementAt(1))),
-          BottomNavigationBarItem(
             icon: _loadIconsFromImage('ball.png'),
             title: Text(_bottomNavigationItemsTitles.elementAt(0),),
           ),
+          BottomNavigationBarItem(
+              icon: _loadIconsFromImage("leaderboard.png"),
+              title: Text(_bottomNavigationItemsTitles.elementAt(1))),
           BottomNavigationBarItem(
               icon: _loadIconsFromImage('settings.png'),
               title: Text(_bottomNavigationItemsTitles.elementAt(2))),
