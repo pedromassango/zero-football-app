@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
 
   TabController _pageController;
-  int _navigationIndex = 0;
+  int _navigationIndex = 1;
 
   List<String> _bottomNavigationItemsTitles = [
     'Desafios', 'Vencedores', 'Minhas apostas',
@@ -95,6 +95,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         type: BottomNavigationBarType.fixed,
         currentIndex: _navigationIndex,
         onTap: (index) {
+          print('INDEX: $index');
+
           setState(() {
             _navigationIndex = index;
             _pageController.animateTo(index);
@@ -115,15 +117,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ),
       body: Column(
         children: <Widget>[
-          _buildCustomToolbar(),
+          _navigationIndex == 1? Container() : _buildCustomToolbar(),
           Expanded(
             flex: 2,
             child: TabBarView(
               physics: NeverScrollableScrollPhysics(),
               controller: _pageController,
               children: [
-                WinnersTab(),
                 ChallengesTab(),
+                WinnersTab(),
                 Container(child: Center(child: Text('Settings'),)),
               ],
             ),

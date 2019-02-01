@@ -15,7 +15,7 @@ class WinnerWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-          margin: _isTheFirst ? EdgeInsets.fromLTRB(8, 8, 8, 32)
+          margin: _isTheFirst ? EdgeInsets.fromLTRB(8, 32, 8, 32)
               : EdgeInsets.fromLTRB(20, 6, 20, 6),
           padding: EdgeInsets.fromLTRB(16, 16, 12, 16),
           decoration: BoxDecoration(
