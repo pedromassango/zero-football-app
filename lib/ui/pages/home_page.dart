@@ -39,7 +39,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget _buildCustomToolbar(){
     return Container(
       width: double.maxFinite,
-      padding: EdgeInsets.fromLTRB(16, 32, 16, 6),
+      margin: EdgeInsets.only(bottom: 1),
+      padding: EdgeInsets.fromLTRB(16, 16, 16, 6),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
