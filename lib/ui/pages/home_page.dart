@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zero/ui/tabs/challenges_tab.dart';
+import 'package:zero/ui/tabs/my_bets_tab.dart';
 import 'package:zero/ui/tabs/winners_tab.dart';
 
 class HomePage extends StatefulWidget {
@@ -127,7 +128,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               children: [
                 ChallengesTab(),
                 WinnersTab(),
-                Container(child: Center(child: Text('Settings'),)),
+                MyBetsTab(),
               ],
             ),
           ),
