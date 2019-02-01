@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-              blurRadius: 1,
+              blurRadius: 2,
               color: Colors.black12
           )
         ],
